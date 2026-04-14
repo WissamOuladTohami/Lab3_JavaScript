@@ -1,0 +1,57 @@
+<%- include('../partials/header') %>
+
+<div class="container">
+
+  <h1>👤 Gestion des utilisateurs</h1>
+
+  <% if (typeof error !== 'undefined' && error) { %>
+    <div class="error-box"><%= error %></div>
+  <% } %>
+
+  <!-- FORM AJOUT -->
+  <div class="card">
+    <form action="/users" method="POST" class="form-add">
+      <input type="text" name="nom" placeholder="Nom" required>
+      <input type="text" name="prenom" placeholder="Prénom" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <button type="submit">➕ Ajouter</button>
+    </form>
+  </div>
+
+  <!-- LISTE -->
+  <div class="card">
+
+    <% if (users.length) { %>
+
+      <ul class="user-list">
+
+        <% users.forEach(u => { %>
+          <li class="user-item">
+
+            <!-- EDIT -->
+            <form action="/users/<%= u.id %>/edit" method="POST" class="form-inline">
+              <input name="nom" value="<%= u.nom %>" required>
+              <input name="prenom" value="<%= u.prenom %>" required>
+              <input name="email" value="<%= u.email %>" required>
+              <button class="btn-edit" type="submit">✏️</button>
+            </form>
+
+            <!-- DELETE -->
+            <form action="/users/<%= u.id %>/delete" method="POST">
+              <button class="btn-delete" type="submit">🗑️</button>
+            </form>
+
+          </li>
+        <% }) %>
+
+      </ul>
+
+    <% } else { %>
+      <p>Aucun utilisateur trouvé.</p>
+    <% } %>
+
+  </div>
+
+</div>
+
+<%- include('../partials/footer') %>

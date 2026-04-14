@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+  margin: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.card {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+/* FORM AJOUT */
+.form-add input {
+  padding: 10px;
+  margin-right: 10px;
+  width: 25%;
+}
+
+.form-add button {
+  padding: 10px 15px;
+  background: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+/* LISTE */
+.user-list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* EDIT FORM */
+.form-inline input {
+  padding: 6px;
+  margin-right: 5px;
+}
+
+/* BUTTONS */
+button {
+  border: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+.btn-edit {
+  background: #007bff;
+  color: white;
+}
+
+.btn-delete {
+  background: red;
+  color: white;
+}
+
+/* ERROR */
+.error-box {
+  background: #ffe5e5;
+  color: red;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  text-align: center;
+}
