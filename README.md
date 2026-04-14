@@ -39,19 +39,23 @@ It allows you to create, update, delete, and display users in a clean web interf
 ## 🧠 Architecture
 
 
-Client
+[ Client (Navigateur)]
 
-↓
+        ↓
+        
+[ Views EJS (Frontend côté serveur)]
 
-EJS Views
+        ↓
+        
+[ Routes Express (Backend / Controller)]
 
-↓
+        ↓
+        
+[ Models / Data Layer (Requêtes SQL)]
 
-Express Routes
-
-↓
-
-PostgreSQL
+        ↓
+        
+[ PostgreSQL (Base de données)]
 
 ---
 
